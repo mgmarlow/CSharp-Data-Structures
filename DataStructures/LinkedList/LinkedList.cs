@@ -97,6 +97,19 @@ namespace DataStructures.LinkedList
                     Head = null;
                     Tail = null;
                 }
+                else
+                {
+                    LinkedListNode<T> current = Head;
+                    while (current.Next != Tail)
+                    {
+                        current = current.Next;
+                    }
+
+                    current.Next = null;
+                    Tail = current;
+                }
+
+                Count--;
             }
         }
 
